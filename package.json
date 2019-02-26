@@ -1,0 +1,17 @@
+{
+	"name": "VoronoiSphere",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Joaqim Planstedt",
+	"homepage": "https://joaqim.github.io/VoronoiSphere",
+	"scripts": {
+		"build": "./build-em.sh",
+		"clean": "rm -rf ./build-em",
+		"serve": "cd build-em/dist && python -m http.server &>/dev/null &",
+		"postbuild": "mv build-em/dist/MyApplication.html build-em/dist/index.html",
+		"deploy": "gh-pages -b master -d build-em/dist"
+	},
+	"devDependencies": {
+		"gh-pages": "^2.0.1"
+	}
+}
